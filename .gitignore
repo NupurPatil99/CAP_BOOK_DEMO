@@ -1,34 +1,35 @@
-# CAP cap-bookshop-demo
-_out
-*.db
-*.sqlite
-connection.properties
-default-*.json
-.cdsrc-private.json
-gen/
+# # CAP cap-bookshop-demo
+# _out
+# *.db
+# *.sqlite
+# connection.properties
+# default-*.json
+# .cdsrc-private.json
+# gen/
 node_modules/
-target/
+# target/
 
-# Web IDE, App Studio
-.che/
-.gen/
+# # Web IDE, App Studio
+# .che/
+# .gen/
 
-# MTA
-*_mta_build_tmp
-*.mtar
-mta_archives/
+# # MTA
+# *_mta_build_tmp
+# *.mtar
+# mta_archives/
 
-# Other
-.DS_Store
-*.orig
-*.log
+# # Other
+# .DS_Store
+# *.orig
+# *.log
 
-*.iml
-*.flattened-pom.xml
+# *.iml
+# *.flattened-pom.xml
 
-# IDEs
-# .vscode
-# .idea
+# # IDEs
+# # .vscode
+# # .idea
 
-# @cap-js/cds-typer
-@cds-models
+# # @cap-js/cds-typer
+# @cds-models
+node_modules

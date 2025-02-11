@@ -1,5 +1,33 @@
-{
-  "scopes": [],
+{  
+  "xsappname":"capxsapp",
+  "tenant-mode":"dedicated",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.USA_USER",
+      "description": "USA_USER"
+    },
+    {
+      "name": "$XSAPPNAME.aunthenticated-user",
+      "description": "aunthenticated-user"
+    }
+  ],
   "attributes": [],
-  "role-templates": []
+  "role-templates": [
+    {
+      "name": "USA_USER",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.USA_USER"
+      ],
+      "attribute-references": []
+    },
+    {
+      "name": "aunthenticated-user",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.aunthenticated-user"
+      ],
+      "attribute-references": []
+    }
+  ]
 }

@@ -1,0 +1,6 @@
+VIEW CatlogService_Genres AS SELECT
+  Genres_0.name,
+  Genres_0.descr,
+  Genres_0.ID,
+  Genres_0.parent_ID
+FROM sap_capire_bookshop_Genres AS Genres_0

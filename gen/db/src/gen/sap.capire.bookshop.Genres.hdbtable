@@ -1,0 +1,7 @@
+COLUMN TABLE sap_capire_bookshop_Genres (
+  name NVARCHAR(255),
+  descr NVARCHAR(1000),
+  ID INTEGER NOT NULL,
+  parent_ID INTEGER,
+  PRIMARY KEY(ID)
+)

@@ -1,0 +1,52 @@
+{
+  "name": "cap-bookshop-demo",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@cap-js/hana": "^1",
+    "@sap/cds": "^8",
+    "@sap/eslint-plugin-ui5-jsdocs": "^2.0.5",
+    "@sap/xssec": "^4",
+    "@sapui5/ts-types": "^1.92.2",
+    "eslint": "^7.32.0",
+    "express": "^4",
+    "hdb": "^0.19.12"
+  },
+  "devDependencies": {
+    "@cap-js/cds-types": "^0.8.0",
+    "@cap-js/sqlite": "^1",
+    "@sap/cds-dk": "^8"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "h-deploy": "cds deploy --to hana:CAPHANAFE-dev",
+    "watch-fe-books": "cds watch --open fe-books/webapp/index.html?sap-ui-xx-viewCache=false",
+    "build":"npx mbt build",
+    "deploy":"cf deploy mta_archives/cap-bookshop-demo_1.0.0.mtar"
+  },
+  "cds": {
+    "build": {
+      "tasks": [
+        {
+          "for": "hana",
+          "dest": "./db"
+        },
+        {
+          "for": "node-cf"
+        }
+      ]
+    },
+    "sql": {
+      "native_hana_associations": false
+    },
+    "requires": {
+      "authenticationMethod" :"none"
+    }
+  },
+  "sapux": [
+    "app/fe-books"
+  ]
+}

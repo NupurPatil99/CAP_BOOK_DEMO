@@ -1,0 +1,6 @@
+VIEW localized_sap_capire_bookshop_Genres AS SELECT
+  coalesce(localized_1.name, L_0.name) AS name,
+  coalesce(localized_1.descr, L_0.descr) AS descr,
+  L_0.ID,
+  L_0.parent_ID
+FROM (sap_capire_bookshop_Genres AS L_0 LEFT JOIN sap_capire_bookshop_Genres_texts AS localized_1 ON localized_1.ID = L_0.ID AND localized_1.locale = SESSION_CONTEXT('LOCALE'))
